@@ -1,8 +1,5 @@
-import { Fragment } from "react";
-
-import Hero from "../components/home-page/hero";
-import FeaturedPosts from "../components/home-page/featured-posts";
-import { getFeaturedPosts } from "../helpers/posts-utils";
+import AllPosts from "../../components/posts/all-posts";
+import { getAllPosts } from "../../helpers/posts-utils";
 
 // const DUMMY_POSTS = [
 //     {
@@ -21,23 +18,18 @@ import { getFeaturedPosts } from "../helpers/posts-utils";
 //     }
 // ];
 
-function HomePage(props) {
-    return (
-        <Fragment>
-            <Hero />
-            <FeaturedPosts posts={props.posts}/>
-        </Fragment>
-    )
+function AllPostsPage(props) {
+    return <AllPosts posts={props.posts}/>
 }
 
 export function getStaticProps() {
-    const featuredPosts = getFeaturedPosts();
+    const allPosts = getAllPosts();
 
     return {
         props: {
-            posts: featuredPosts
+            posts: allPosts
         }
     }
 }
 
-export default HomePage;
+export default AllPostsPage;

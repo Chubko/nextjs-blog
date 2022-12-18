@@ -13,7 +13,7 @@ function Hero() {
                     height={300}
                 />
             </div>
-            <h1>Hi, I'm Leia</h1>
+            <h1>Hi, I&apos;m Leia</h1>
             <p>Greatest Woman In The Galaxy</p>
         </section>
     )
